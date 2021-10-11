@@ -1,0 +1,18 @@
+:root{
+    --primary-color-light-red: hsl(356, 100%, 66%);
+    --primary-color-very-light-red: hsl(355, 100%, 74%);
+    --primary-color-very-dark-blue: hsl(208, 49%, 24%);
+
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-grayish-blue: hsl(240, 2%, 79%);
+    --neutral-color-very-dark-graylish-blue: hsl(207, 13%, 34%);
+    --neutral-color-very-dark-black-blue: hsl(240, 10%, 16%);
+    
+    --gradient-very-light-red: hsl(13, 100%, 72%);
+    --gradient-light-red: hsl(353, 100%, 62%);
+    --gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
+    --gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+    --ff-overpass-ss: 'Overpass', sans-serif;
+    --ff-ubuntu-ss: 'Ubuntu', sans-serif;
+}
