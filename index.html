@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="style/assets/images/favicon-32x32.png">
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
+
     <header class="header">
         <div class="header-items">
             <div class="logo">
@@ -32,6 +34,7 @@
                             <li class="dropdown-item"><a href="#" class="dropdown-link">Integrations</a></li>
                         </ul>
                     </li>
+
                     <li class="menu-item company-dropdown">
                         <a href="#" class="menu-link">Company <i class="arrow"></i></a>
 
@@ -42,6 +45,7 @@
                             <li class="dropdown-item"><a href="#" class="dropdown-link">Careers</a></li>
                         </ul>
                     </li>
+
                     <li class="menu-item connect-dropdown">
                         <a href="#" class="menu-link">Connect <i class="arrow"></i></a>
                         <ul class="dropdown-container">
@@ -50,7 +54,9 @@
                             <li class="dropdown-item"><a href="#" class="dropdown-link">LinkedIn</a></li>
                         </ul>
                     </li>
+
                     <hr>
+
                     <li class="menu-item"><a href="#" class="menu-link">Login</a></li>
                     <li class="menu-item"><a href="#" class="menu-link">Sign Up</a></li>
                 </ul>
@@ -73,24 +79,26 @@
         </div>
     </header>
 
-    <section class="introduction">
+    <section class="container  introduction-container">
         <article class="introduction-content">
             <h2 class="introduction-title">
                 Designed for the future
             </h2>
             <aside class="introduction-aside">
                 <div class="illustration-editor"></div>
-                <h2 class="aside-title">
+                <h3 class="introduction-aside-title">
                     Introduction an extensible editor
-                </h2>
-                <p class="aside-text">
+                </h3>
+                <p class="introduction-aside-text">
                     Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
                     The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
                     videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
                     change the looks of a blog.
                 </p>
-                <h2 class="aside-title">Robust content management</h2>
-                <p class="aside-text">
+                <h3 class="introduction-aside-title">
+                    Robust content management
+                </h3>
+                <p class="introduction-aside-text">
                     Flexible content management enables users to easily move through posts. Increase the usability of your blog 
                     by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
                 </p>
@@ -98,19 +106,77 @@
         </article>
     </section>
 
-    <section class="informative-section">
+    <section class="container  informative-container">
         <article class="informative-content">
             <div class="illustration-phones"></div>
             <aside class="informative-aside">
-                <h2 class="aside-title">
+                <h2 class="informative-aside-title">
                     State of the Art Infrastructure
                 </h2>
-                <p class="aside-text">
-                    
+                <p class="informative-aside-text">
+                    With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+                    This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
                 </p>
             </aside>
         </article>
     </section>
+
+    <section class="container  explicative-container">
+        <article class="explicative-article">
+            <div class="illustration-laptop"></div>
+            <aside class="explicative-aside">
+                <h2 class="explicative-title">
+                    Free, open, simple
+                </h2>
+                <p class="explicative-text">
+                    Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                    features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                    and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                </p>
+                <h2 class="explicative-title">
+                    Powerful tooling
+                </h2>
+                <p class="explicative-text">
+                    Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                    capable of producing even the most complicated sites.
+                </p>
+            </aside>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo-container">
+        <img src="style/assets/images/logo.svg" alt="" class="footer-logo">
+        </div>
+        <ul class="footer-container">
+            <li class="footer-list product-list">
+                <h3 class="product-title">Product</h3>
+                <a href="#" class="footer-list-items product-links">Overview</a>
+                <a href="#" class="footer-list-items product-links">Pricing</a>
+                <a href="#" class="footer-list-items product-links">Marketplace</a>
+                <a href="#" class="footer-list-items product-links">Features</a>
+                <a href="#" class="footer-list-items product-links">Integrations</a>
+            </li>
+            <li class="footer-list company-list">
+                <h3 class="company-title">Company</h3>
+                <a href="#" class="footer-list-items company-links">About</a>
+                <a href="#" class="footer-list-items company-links">Team</a>
+                <a href="#" class="footer-list-items company-links">Blog</a>
+                <a href="#" class="footer-list-items company-links">Careers</a>
+            </li>
+            <li class="footer-list connect-list">
+                <h3 class="connect-title">Connect</h3>
+                <a href="#" class="footer-list-items connect-list">Contact</a>
+                <a href="#" class="footer-list-items connect-list">Newsletter</a>
+                <a href="#" class="footer-list-items connect-list">Linkedin</a>
+            </li>
+        </ul>
+    </footer>
+    
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Holulosamo" target="_blank" rel="noopener">Elías Rodriguez</a>.
+    </div>
 
     <script src="js/script.js" defer></script>
 </body>

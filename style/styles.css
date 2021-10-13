@@ -16,3 +16,12 @@
     --ff-overpass-ss: 'Overpass', sans-serif;
     --ff-ubuntu-ss: 'Ubuntu', sans-serif;
 }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
