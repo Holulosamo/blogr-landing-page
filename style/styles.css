@@ -5,7 +5,7 @@
 
     --neutral-color-white: hsl(0, 0%, 100%);
     --neutral-color-graylish-blue: hsl(240, 2%, 79%);
-    --hsla-graylish-blue: hsla(240, 2%, 79%, .3);
+    --hsla-graylish-blue: hsla(240, 2%, 79%, .2);
     --neutral-color-very-dark-graylish-blue: hsl(207, 13%, 34%);
     --neutral-color-very-dark-black-blue: hsl(240, 10%, 16%);
     
@@ -43,6 +43,7 @@ body{
 .header-items{
     position: relative;
     max-width: 1200px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -73,13 +74,13 @@ body{
 }
 
 .nav-menu{
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
     margin: 7em 1em;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
     width: 90%;
     max-width: 338px;
     border-radius: .3em;
@@ -128,11 +129,12 @@ body{
     background: url(assets/images/icon-arrow-dark.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: transform .3s ease .1s;
 }
 
 .menu-arrow.active::after{
     transform: rotate(180deg);
-    /* transition: ; */
+    transition: transform .3s ease .1s;
 }
 
 
@@ -156,6 +158,19 @@ body{
     color: var(--primary-color-very-dark-blue);
 }
 
+hr{
+    border-color: var(--hsla-graylish-blue);
+}
+
+.login-btn-container{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.login{
+    font-size: 1.5em;
+}
+
 .sign-up{
     padding: 1em 3em;
     font-family: var(--ff-ubuntu-ss);
@@ -163,6 +178,20 @@ body{
     color: var(--neutral-color-white);
     border-radius: 2em;
     background: linear-gradient(to right, var(--gradient-very-light-red), var(--gradient-light-red));
+}
+
+.header-content{
+    text-align: center;
+    color: var(--neutral-color-white);
+}
+
+.header-content-title{
+    font-size: 2.6rem;
+    white-space: pre-line;
+}
+
+.header-content-text{
+    font-size: 1.3rem;
 }
 
 @keyframes openMenu {
