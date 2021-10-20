@@ -4,7 +4,8 @@
     --primary-color-very-dark-blue: hsl(208, 49%, 24%);
 
     --neutral-color-white: hsl(0, 0%, 100%);
-    --neutral-color-grayish-blue: hsl(240, 2%, 79%);
+    --neutral-color-graylish-blue: hsl(240, 2%, 79%);
+    --hsla-graylish-blue: hsla(240, 2%, 79%, .3);
     --neutral-color-very-dark-graylish-blue: hsl(207, 13%, 34%);
     --neutral-color-very-dark-black-blue: hsl(240, 10%, 16%);
     
@@ -17,11 +18,170 @@
     --ff-ubuntu-ss: 'Ubuntu', sans-serif;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
 *,
 *::after,
 *::before{
     box-sizing: border-box;
 }
+
+body{
+    margin: 0;
+}
+
+.header{
+    width: 100%;
+    height: 600px;
+    border-bottom-left-radius: 6em;
+    font-family: var(--ff-overpass-ss);
+    background: url(assets/images/bg-pattern-intro.svg), linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 400%, 100%;
+    background-position: 38% 44%;
+    background-repeat: no-repeat;
+}
+
+.header-items{
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    margin-top: 3em;
+    margin-left: 1.5em;
+}
+
+.hamburguer-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3.8em 1em;
+    width: 32px;
+    height: 18px;
+    background: url(assets/images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hamburguer-btn.close-icon{
+    width: 48px;
+    height: 24px;
+    background: url(assets/images/icon-close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-menu{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 7em 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 90%;
+    max-width: 338px;
+    border-radius: .3em;
+    font-family: var(--ff-overpass-ss);
+    background-color: #fff;
+    box-shadow: 5px 10px 2em rgb(0, 0, 0, .2);
+}
+
+.nav-menu.open{
+    display: block;
+}
+
+.menu-container, .dropdown-container{
+    list-style: none;
+    padding: 0; 
+}
+
+.menu-link, .dropdown-link{
+    text-decoration: none;
+}
+
+.menu-container{
+    text-align: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-item{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.menu-link{
+    color: var(--primary-color-very-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.menu-arrow::after{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: .3em;
+    background: url(assets/images/icon-arrow-dark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-arrow.active::after{
+    transform: rotate(180deg);
+    /* transition: ; */
+}
+
+
+.dropdown-container{
+    display: none;
+    padding-top: .7em;
+    padding-bottom: .7em;
+    margin-top: 1em;
+    line-height: 2.4;
+    border-radius: .3em;
+    background-color: var(--hsla-graylish-blue);
+}
+
+.active-dropdown{
+    display: block;
+    animation: openMenu .5s ease;
+}
+
+.dropdown-link{
+    font-weight: 600;
+    color: var(--primary-color-very-dark-blue);
+}
+
+.sign-up{
+    padding: 1em 3em;
+    font-family: var(--ff-ubuntu-ss);
+    font-weight: 600;
+    color: var(--neutral-color-white);
+    border-radius: 2em;
+    background: linear-gradient(to right, var(--gradient-very-light-red), var(--gradient-light-red));
+}
+
+@keyframes openMenu {
+  from { 
+    transform: scale(1, 0); 
+    transform-origin: top; 
+    opacity: 0;
+    }
+  to { 
+    transform:scale(1, 1);
+    transform-origin: top;
+    opacity: 1;
+    }
+}
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
