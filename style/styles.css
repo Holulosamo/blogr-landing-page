@@ -219,6 +219,65 @@ hr{
     background: var(--neutral-color-white);
 }
 
+.container{
+    padding-top: 10vh;
+    text-align: center;
+    font-family: var(--ff-overpass-ss);
+}
+
+.introduction-container h2, .explicative-container h2, .introduction-container h3, .explicative-container h3{
+    color: var(--primary-color-very-dark-blue);
+}
+
+.introduction-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.introduction-title{
+    font-size: 1.7rem;
+}
+
+.introduction-aside{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.introduction-aside-title{
+    font-size: 1.7rem;
+    margin-top: 5vh;
+}
+
+.introduction-aside-text{
+    line-height: 1.6;
+    color: var(--neutral-color-very-dark-black-blue);
+}
+
+.illustration-editor{
+    height: 310px;
+    margin-left: auto;
+    margin-top: 5vh;
+    margin-right: auto;
+    max-width: 375px;
+    background: url(assets/images/illustration-editor-mobile.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.informative-container{
+    margin-top: 30vh;
+    height: 640px;
+    border-top-right-radius: 8em;
+    border-bottom-left-radius: 8em;
+    background: url(assets/images/bg-pattern-circles.svg);
+    background-color: var(--gradient-very-dark-gray-blue);
+    background-size: 150%;
+    background-position: center -180px;
+    background-repeat: no-repeat;
+}
+
 @keyframes openMenu {
   from { 
     transform: scale(1, 0); 
