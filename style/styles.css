@@ -31,7 +31,7 @@ body{
 
 .header{
     width: 100%;
-    height: 600px;
+    height: 650;
     border-bottom-left-radius: 6em;
     font-family: var(--ff-overpass-ss);
     background: url(assets/images/bg-pattern-intro.svg), linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
@@ -98,7 +98,7 @@ body{
     padding: 0; 
 }
 
-.menu-link, .dropdown-link{
+.dropdown-button, .menu-link, .dropdown-link, .header-buttons{
     text-decoration: none;
 }
 
@@ -110,33 +110,41 @@ body{
 }
 
 .menu-item{
+    display: block;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.menu-link{
+.dropdown-button, .menu-link{
     color: var(--primary-color-very-dark-blue);
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.menu-arrow::after{
+.input{
+    appearance: none;
+}
+
+.input::after{
     content: "";
     display: inline-block;
     width: 12px;
     height: 12px;
-    margin-left: .3em;
     background: url(assets/images/icon-arrow-dark.svg);
     background-repeat: no-repeat;
     background-position: center;
-    transition: transform .3s ease .1s;
+    transition: transform .2s ease;
 }
 
-.menu-arrow.active::after{
+.input:checked::after{
     transform: rotate(180deg);
-    transition: transform .3s ease .1s;
+    transition: transform .2s ease;
 }
 
+.input:checked + .dropdown-container{
+    display: block;
+    animation: openMenu .5s ease;
+}
 
 .dropdown-container{
     display: none;
@@ -146,11 +154,6 @@ body{
     line-height: 2.4;
     border-radius: .3em;
     background-color: var(--hsla-graylish-blue);
-}
-
-.active-dropdown{
-    display: block;
-    animation: openMenu .5s ease;
 }
 
 .dropdown-link{
@@ -168,7 +171,7 @@ hr{
 }
 
 .login{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .sign-up{
@@ -194,6 +197,28 @@ hr{
     font-size: 1.3rem;
 }
 
+.buttons-container{
+    margin-top: 4em;
+}
+
+.header-buttons{
+    margin-left: .3em;
+    margin-right: .3em;
+    padding: .8em .7em;
+    border: thin solid var(--neutral-color-white);
+    border-radius: 2em;
+    font-family: var(--ff-ubuntu-ss);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: inherit;
+    cursor: pointer;
+}   
+
+.btn-1{
+    color: var(--primary-color-light-red);
+    background: var(--neutral-color-white);
+}
+
 @keyframes openMenu {
   from { 
     transform: scale(1, 0); 
@@ -206,11 +231,6 @@ hr{
     opacity: 1;
     }
 }
-
-
-
-
-
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
