@@ -16,6 +16,8 @@
 
     --ff-overpass-ss: 'Overpass', sans-serif;
     --ff-ubuntu-ss: 'Ubuntu', sans-serif;
+
+    border: #d4d7da
 }
 
 
@@ -220,7 +222,6 @@ hr{
 }
 
 .container{
-    padding-top: 10vh;
     text-align: center;
     font-family: var(--ff-overpass-ss);
 }
@@ -232,6 +233,7 @@ hr{
 .introduction-content{
     display: flex;
     flex-direction: column;
+    padding-top: 10vh;
 }
 
 .introduction-title{
@@ -241,7 +243,7 @@ hr{
 .introduction-aside{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    inline-size: 290px;
 }
 
 .introduction-aside-title{
@@ -251,7 +253,7 @@ hr{
 
 .introduction-aside-text{
     line-height: 1.6;
-    color: var(--neutral-color-very-dark-black-blue);
+    color: var(--neutral-color-very-dark-graylish-blue);
 }
 
 .illustration-editor{
@@ -259,23 +261,83 @@ hr{
     margin-left: auto;
     margin-top: 5vh;
     margin-right: auto;
-    max-width: 375px;
     background: url(assets/images/illustration-editor-mobile.svg);
+    background-size:375px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
 }
 
 .informative-container{
-    margin-top: 30vh;
-    height: 640px;
-    border-top-right-radius: 8em;
-    border-bottom-left-radius: 8em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24vh;
+    padding-bottom: 7em;
+    border-top-right-radius: 6.5em;
+    border-bottom-left-radius: 6.5em;
     background: url(assets/images/bg-pattern-circles.svg);
-    background-color: var(--gradient-very-dark-gray-blue);
-    background-size: 150%;
-    background-position: center -180px;
+    background-color: rgba(26, 28, 59, 0.9);
+    background-size: 580px;
+    background-position: center -250px;
     background-repeat: no-repeat;
+    color: var(--neutral-color-white);
+}
+
+.illustration-phones{
+    position: absolute;
+    top: -370px;
+    right: 2px;
+    width: 100%;
+    height: 760px;
+    background: url(assets/images/illustration-phones.svg);
+    background-size: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.informative-aside{
+    inline-size: 260px;
+}
+
+.informative-aside-title{
+    padding-top: 5.3em;
+    font-size: 2rem;
+}
+
+.informative-aside-text{
+    color: var(--neutral-color-graylish-blue);
+    font-size: .9rem;
+    line-height: 2;
+}
+
+.explicative-container{
+    padding-bottom: 5em;
+}
+
+.illustration-laptop{
+    height: 380px;
+    margin-top: 6vh;
+    background: url(assets/images/illustration-laptop-mobile.svg);
+    background-size: 510px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.explicative-title{
+    font-size: 1.7rem;
+}
+
+.explicative-text{
+    margin-right: auto;
+    margin-left: auto;
+    inline-size: 290px;
+    color: var(--neutral-color-very-dark-graylish-blue);
+}
+
+.footer{
+    padding-top: 3em;
+    background-color: var(--neutral-color-very-dark-black-blue)
 }
 
 @keyframes openMenu {
