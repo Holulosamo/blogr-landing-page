@@ -65,6 +65,7 @@ body{
     background: url(assets/images/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: transform .3s ease;
 }
 
 .hamburguer-btn.close-icon{
@@ -73,6 +74,8 @@ body{
     background: url(assets/images/icon-close.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transform: rotate(180deg);
+    transition: transform .3s ease;
 }
 
 .nav-menu{
@@ -315,6 +318,11 @@ hr{
     padding-bottom: 5em;
 }
 
+.explicative-article{
+    display: flex;
+    flex-direction: column;
+}
+
 .illustration-laptop{
     height: 380px;
     margin-top: 6vh;
@@ -336,8 +344,38 @@ hr{
 }
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 3em;
-    background-color: var(--neutral-color-very-dark-black-blue)
+    border-top-right-radius: 5.5em;
+    text-align: center;
+    color: var(--neutral-color-white);
+    font-family: var(--ff-overpass-ss);
+    background-color: var(--neutral-color-very-dark-black-blue);
+}
+
+.footer-logo-container{
+    padding-top: 2em;
+}
+
+.footer-container{
+    padding: 0;
+    padding-top: 1em;
+    padding-bottom: 4em;
+    list-style: none;
+}
+
+.title-list{
+    padding-top: 1.5em;
+}
+
+.footer-list-links{
+    display: block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--neutral-color-graylish-blue);
+    line-height: 1.8;
 }
 
 @keyframes openMenu {
@@ -351,6 +389,10 @@ hr{
     transform-origin: top;
     opacity: 1;
     }
+}
+
+@media screen and (min-width: 1024px) {
+
 }
 
 .attribution { font-size: 11px; text-align: center; }
