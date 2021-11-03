@@ -44,7 +44,7 @@ body{
 
 .header-items{
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -65,6 +65,7 @@ body{
     background: url(assets/images/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
+    cursor: pointer;
     transition: transform .3s ease;
 }
 
@@ -114,7 +115,7 @@ body{
     margin-right: auto;
 }
 
-.menu-item{
+.menu-dropdown{
     display: block;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -124,6 +125,12 @@ body{
     color: var(--primary-color-very-dark-blue);
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.dropdown-button:hover{
+    color: var(--neutral-color-very-dark-graylish-blue);
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .input{
@@ -182,7 +189,6 @@ hr{
 .sign-up{
     padding: 1em 3em;
     font-family: var(--ff-ubuntu-ss);
-    font-weight: 600;
     color: var(--neutral-color-white);
     border-radius: 2em;
     background: linear-gradient(to right, var(--gradient-very-light-red), var(--gradient-light-red));
@@ -210,10 +216,9 @@ hr{
     margin-left: .3em;
     margin-right: .3em;
     padding: .8em .7em;
-    border: thin solid var(--neutral-color-white);
     border-radius: 2em;
     font-family: var(--ff-ubuntu-ss);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.2rem;
     color: inherit;
     cursor: pointer;
@@ -222,6 +227,20 @@ hr{
 .btn-1{
     color: var(--primary-color-light-red);
     background: var(--neutral-color-white);
+}
+
+.btn-2{
+    border: thin solid var(--neutral-color-white);
+}
+
+.btn-1:hover{
+    color: var(--neutral-color-white);
+    background-color: var(--primary-color-very-light-red);
+}
+
+.btn-2:hover{
+    color: var(--primary-color-light-red);
+    background-color: var(--neutral-color-white);
 }
 
 .container{
@@ -348,10 +367,10 @@ hr{
     flex-direction: column;
     align-items: center;
     padding-top: 3em;
-    border-top-right-radius: 5.5em;
+    border-top-right-radius: 6em;
     text-align: center;
     color: var(--neutral-color-white);
-    font-family: var(--ff-overpass-ss);
+    font-family: var(--ff-ubuntu-ss);
     background-color: var(--neutral-color-very-dark-black-blue);
 }
 
@@ -368,6 +387,7 @@ hr{
 
 .title-list{
     padding-top: 1.5em;
+    font-weight: 400;
 }
 
 .footer-list-links{
@@ -376,6 +396,10 @@ hr{
     font-size: 1.1rem;
     color: var(--neutral-color-graylish-blue);
     line-height: 1.8;
+}
+
+.footer-list-links:hover{
+    text-decoration: underline;
 }
 
 @keyframes openMenu {
@@ -392,7 +416,42 @@ hr{
 }
 
 @media screen and (min-width: 1024px) {
+    .nav-menu{
+        all: revert;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 
+    hr, .hamburguer-btn, .input{
+        display: none;
+    }
+
+    .menu-container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        place-items: center;
+    }
+
+    .menu-product{
+        grid-column: 2/3;
+    }
+
+    .menu-company{
+        grid-column: 3/5;
+    }
+
+    .menu-column{
+        grid-column: 5/6;
+    }
+
+    .login-btn-container{
+        grid-column: 10 / 11;
+    }
+
+    .sign-up-btn-container{
+        grid-column: 11 / 13;
+    }
 }
 
 .attribution { font-size: 11px; text-align: center; }
