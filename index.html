@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/script.js" defer></script>
     <title>Blogr Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,9 @@
             <nav class="nav-menu">
                     <ul class="menu-container">
                         <li class="menu-dropdown  menu-product">
-                            <a href="#" class="dropdown-button">Product</a>                          
+                            <label for="input-1" class="dropdown-button">Product</label>
+
+                            <input type="checkbox" id="input-1" class="input">
 
                             <ul class="dropdown-container">
                                 <li class="dropdown-item"><a href="#" class="dropdown-link">Overview</a></li>
@@ -34,7 +36,9 @@
                             </ul>
                         </li>
                         <li class="menu-dropdown  menu-company">
-                            <a href="#" class="dropdown-button">Company</a>
+                            <label for="input-2" class="dropdown-button">Company</label>
+
+                            <input type="checkbox" id="input-2" class="input">
 
                             <ul class="dropdown-container">
                                 <li class="dropdown-item"><a href="#" class="dropdown-link">About</a></li>
@@ -44,7 +48,10 @@
                             </ul>
                         </li>
                         <li class="menu-dropdown  menu-connect">
-                            <a href="#" class="dropdown-button">Connect</a>
+                            <label for="input-3" class="dropdown-button">Connect</label>
+
+                            <input type="checkbox" id="input-3" class="input">
+
                             <ul class="dropdown-container">
                                 <li class="dropdown-item"><a href="#" class="dropdown-link">Contact</a></li>
                                 <li class="dropdown-item"><a href="#" class="dropdown-link">Newsletter</a></li>
@@ -70,8 +77,8 @@
                 </p>
                 
                 <div class="buttons-container">
-                    <a href="" class="header-buttons  header-btn-1">Start for Free</a>
-                    <a href="" class="header-buttons  header-btn-2">Learn More</a>
+                    <a href="" class="header-buttons  btn-1">Start for Free</a>
+                    <a href="" class="header-buttons  btn-2">Learn More</a>
                 </div>
             </section>
         </div>
@@ -84,64 +91,58 @@
             </h2>
             <aside class="introduction-aside">
                 <div class="illustration-editor"></div>
-                <div class="aside-text-container">
-                    <h3 class="introduction-aside-title">
-                        Introduction an extensible editor
-                    </h3>
-                    <p class="introduction-aside-text">
-                        Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-                        The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-                        videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-                        change the looks of a blog.
-                    </p>
-                    <h3 class="introduction-aside-title">
-                        Robust content management
-                    </h3>
-                    <p class="introduction-aside-text">
-                        Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-                        by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-                    </p>
-                </div>
+                <h3 class="introduction-aside-title">
+                    Introduction an extensible editor
+                </h3>
+                <p class="introduction-aside-text">
+                    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                    The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                    videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                    change the looks of a blog.
+                </p>
+                <h3 class="introduction-aside-title">
+                    Robust content management
+                </h3>
+                <p class="introduction-aside-text">
+                    Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+                    by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
             </aside>
         </article>
     </section>
 
-    <section class="container  infraestructure-container">
+    <section class="container  informative-container">
         <div class="illustration-phones"></div>
-        <aside class="infraestructure-aside">
-            <h2 class="infraestructure-aside-title">
+        <aside class="informative-aside">
+            <h2 class="informative-aside-title">
                 State of the Art Infrastructure
             </h2>
-            <p class="infraestructure-aside-text">
+            <p class="informative-aside-text">
                 With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
                 This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
             </p>    
         </aside>
     </section>
 
-    <section class="container  info-container">
-        <article class="info-article">
+    <section class="container  explicative-container">
+        <article class="explicative-article">
             <div class="illustration-laptop"></div>
-            <aside class="info-aside">
-                <div class="container-1">
-                    <h2 class="info-title">
-                        Free, open, simple
-                    </h2>
-                    <p class="info-text">
-                        Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-                        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-                        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-                    </p>
-                </div>
-                <div class="container-2">
-                    <h2 class="info-title">
-                        Powerful tooling
-                    </h2>
-                    <p class="info-text">
-                        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-                        capable of producing even the most complicated sites.
-                    </p>
-                </div>
+            <aside class="explicative-aside">
+                <h2 class="explicative-title">
+                    Free, open, simple
+                </h2>
+                <p class="explicative-text">
+                    Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                    features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                    and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                </p>
+                <h2 class="explicative-title">
+                    Powerful tooling
+                </h2>
+                <p class="explicative-text">
+                    Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                    capable of producing even the most complicated sites.
+                </p>
             </aside>
         </article>
     </section>
@@ -150,7 +151,7 @@
         <div class="footer-logo-container">
         <img src="style/assets/images/logo.svg" alt="" class="footer-logo">
         </div>
-        <ul class="footer-container-list">
+        <ul class="footer-container">
             <li class="footer-list product-list">
                 <h3 class="product-title  title-list">Product</h3>
                 <a href="#" class="footer-list-links product-links">Overview</a>

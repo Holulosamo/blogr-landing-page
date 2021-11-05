@@ -33,10 +33,10 @@ body{
 
 .header{
     width: 100%;
-    padding-bottom: 5em;
+    height: 650;
     border-bottom-left-radius: 6em;
     font-family: var(--ff-overpass-ss);
-    background: url(assets/images/bg-pattern-intro.svg), linear-gradient(100deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background: url(assets/images/bg-pattern-intro.svg), linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-size: 400%, 100%;
     background-position: 38% 44%;
     background-repeat: no-repeat;
@@ -119,7 +119,6 @@ body{
     display: block;
     padding-top: 1em;
     padding-bottom: 1em;
-    cursor: pointer;
 }
 
 .dropdown-button, .menu-link{
@@ -128,29 +127,33 @@ body{
     font-weight: 600;
 }
 
-.dropdown-button::after{
+.dropdown-button:hover{
+    color: var(--neutral-color-very-dark-graylish-blue);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.input{
+    appearance: none;
+}
+
+.input::after{
     content: "";
     display: inline-block;
     width: 12px;
     height: 12px;
-    margin-left: .2em;
     background: url(assets/images/icon-arrow-dark.svg);
     background-repeat: no-repeat;
     background-position: center;
     transition: transform .2s ease;
 }
 
-.menu-dropdown:hover > .dropdown-button{
-    color: var(--neutral-color-very-dark-graylish-blue);
-    text-decoration: underline;
-}
-
-.menu-dropdown:hover > .dropdown-button::after{
+.input:checked::after{
     transform: rotate(180deg);
     transition: transform .2s ease;
 }
 
-.menu-dropdown:hover .dropdown-container{
+.input:checked + .dropdown-container{
     display: block;
     animation: openMenu .5s ease;
 }
@@ -184,11 +187,10 @@ hr{
 }
 
 .sign-up{
-    padding: .9em 2em;
+    padding: 1em 3em;
     font-family: var(--ff-ubuntu-ss);
     color: var(--neutral-color-white);
     border-radius: 2em;
-    font-weight: 700;
     background: linear-gradient(to right, var(--gradient-very-light-red), var(--gradient-light-red));
 }
 
@@ -213,7 +215,7 @@ hr{
 .header-buttons{
     margin-left: .3em;
     margin-right: .3em;
-    padding: 1em .8em;
+    padding: .8em .7em;
     border-radius: 2em;
     font-family: var(--ff-ubuntu-ss);
     font-weight: 600;
@@ -222,21 +224,21 @@ hr{
     cursor: pointer;
 }   
 
-.header-btn-1{
+.btn-1{
     color: var(--primary-color-light-red);
     background: var(--neutral-color-white);
 }
 
-.header-btn-2{
+.btn-2{
     border: thin solid var(--neutral-color-white);
 }
 
-.header-btn-1:hover{
+.btn-1:hover{
     color: var(--neutral-color-white);
     background-color: var(--primary-color-very-light-red);
 }
 
-.header-btn-2:hover{
+.btn-2:hover{
     color: var(--primary-color-light-red);
     background-color: var(--neutral-color-white);
 }
@@ -246,11 +248,13 @@ hr{
     font-family: var(--ff-overpass-ss);
 }
 
-.introduction-container h2, .info-container h2, .introduction-container h3, .info-container h3{
+.introduction-container h2, .explicative-container h2, .introduction-container h3, .explicative-container h3{
     color: var(--primary-color-very-dark-blue);
 }
 
 .introduction-content{
+    display: flex;
+    flex-direction: column;
     padding-top: 10vh;
 }
 
@@ -285,10 +289,13 @@ hr{
     background-repeat: no-repeat;
 }
 
-.infraestructure-container{
+.informative-container{
     position: relative;
-    margin-top: 15em;
-    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24vh;
+    padding-bottom: 7em;
     border-top-right-radius: 6.5em;
     border-bottom-left-radius: 6.5em;
     background: url(assets/images/bg-pattern-circles.svg);
@@ -311,26 +318,28 @@ hr{
     background-repeat: no-repeat;
 }
 
-.infraestructure-aside{
+.informative-aside{
     inline-size: 260px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10em;
-
 }
 
-.infraestructure-aside-title{
+.informative-aside-title{
+    padding-top: 5.3em;
     font-size: 2rem;
 }
 
-.infraestructure-aside-text{
+.informative-aside-text{
     color: var(--neutral-color-graylish-blue);
     font-size: .9rem;
     line-height: 2;
 }
 
-.info-container{
+.explicative-container{
     padding-bottom: 5em;
+}
+
+.explicative-article{
+    display: flex;
+    flex-direction: column;
 }
 
 .illustration-laptop{
@@ -342,18 +351,21 @@ hr{
     background-repeat: no-repeat;
 }
 
-.info-title{
+.explicative-title{
     font-size: 1.7rem;
 }
 
-.info-text{
-    margin-right: auto; 
-    margin-left: auto;  
+.explicative-text{
+    margin-right: auto;
+    margin-left: auto;
     inline-size: 290px;
     color: var(--neutral-color-very-dark-graylish-blue);
 }
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 3em;
     border-top-right-radius: 6em;
     text-align: center;
@@ -366,7 +378,7 @@ hr{
     padding-top: 2em;
 }
 
-.footer-container-list{
+.footer-container{
     padding: 0;
     padding-top: 1em;
     padding-bottom: 4em;
@@ -404,11 +416,6 @@ hr{
 }
 
 @media screen and (min-width: 1024px) {
-    .header{
-        background-size: 3500px, 100%;
-        background-position: 23% 53%;
-    }
-
     .nav-menu{
         all: revert;
         position: absolute;
@@ -416,254 +423,35 @@ hr{
         width: 100%;
     }
 
-    hr, .hamburguer-btn{
+    hr, .hamburguer-btn, .input{
         display: none;
     }
 
-    
     .menu-container{
         display: grid;
-        grid-template-columns: repeat(auto-fill);
+        grid-template-columns: repeat(12, 1fr);
         place-items: center;
-        gap: 2em;
-        font-family: var(--ff-ubuntu-ss); 
-    }
-    
-    .menu-dropdown{
-        position: relative;
-    }
-    
-    .dropdown-container{
-        position: absolute;
-        right: -55px;
-        text-align: left;
-        padding: 1em 4em 1em 1em;
-        background-color: var(--neutral-color-white);
-
     }
 
-    .menu-dropdown, .menu-item{
-        margin-top: .8em;
-    }
-    
-    .dropdown-link{
-        font-weight: 400;
-    }
-
-    .dropdown-link:hover {text-shadow:0px 0px 1px black;}
-
-    .dropdown-button, .login{
-        color: var(--neutral-color-white);
-    }
-
-    .dropdown-button:after{
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        margin-top: .3em;
-        margin-left: .5em;
-        background: url(assets/images/icon-arrow-light.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: transform .2s ease;
-    }
-
-    .menu-dropdown:hover > .dropdown-button{
-        color: var(--neutral-color-white);
-    }
-    
     .menu-product{
-        grid-column: 3/4;
-    }
-    
-    .menu-company{
-        grid-column: 4/5;
-    }
-    
-    .menu-connect{
-        grid-column: 5/6;
-    }
-    
-    .login-btn-container{
-        grid-column: 12 / 13;
-    }
-    
-    .sign-up-btn-container{
-        grid-column: 13 / 14;
-    }
-    
-    .login{
-        font-size: 1.2rem;
-        color: var(--neutral-color-white);
-    }
-    
-    .sign-up{
-        font-size: 1rem;
-        padding: 1.2em 2.5em;
-        color: var(--primary-color-light-red);
-        background: var(--neutral-color-white);
-    }
-
-    .sign-up:hover{
-        color: var(--neutral-color-white);
-        background-color: var(--primary-color-very-light-red);
-    }
-
-    .header-content-title{
-        font-size: 4.3rem;
-    }
-
-    .header-content-text{
-        font-size: 1.8rem;
-    }
-
-    .header-buttons{
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-        font-size: 1.3rem;
-    }
-
-    .introduction-aside{
-        position: relative;
-        display: grid;
-        width: 100%;
-        place-items: center;
-        text-align: left;
-        grid-template-columns: repeat(4, 1fr);
-        padding-bottom: 10vh;
-    }
-    
-    .introduction-title{
-        font-size: 2.5rem;
-    }
-    
-    .illustration-editor{
-        position: absolute;
-        grid-column: 3/5;
-        grid-row: 1/1;
-        width: 100%;
-        height: 600px;
-        background: url(assets/images/illustration-editor-desktop.svg);
-        background-repeat: no-repeat;
-        background-position: 100px 0;
-        background-size: cover;
-    }
-    
-    .aside-text-container{
-        padding-top: 5vh;
-        margin-left: 5em;
-        grid-column: 1/3;
-    }
-
-    .infraestructure-container{
-        background-size: 1150px;
-        background-position: -250px -590px;
-    }
-
-    .introduction-aside-text{
-        width: 502px;
-    }
-
-    .infraestructure-container{
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .illustration-phones{
-        grid-column: 1/2;
-        top: -160px;
-        background-size: 510px;
-    }
-
-    .infraestructure-aside{
-        text-align: left;
-        height: 100%;
-        margin-bottom: 6em;
-        width: 570px;
         grid-column: 2/3;
     }
 
-    .info-article{
-        display: grid;
-        text-align: left;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+    .menu-company{
+        grid-column: 3/5;
     }
 
-    .illustration-laptop{
-        height: 600px;
-        background: url(assets/images/illustration-laptop-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: 500px;
-        background-position:center;
+    .menu-column{
+        grid-column: 5/6;
     }
 
-    .container-1{
-        padding-top: 2em; 
-        padding-bottom: 2em}
-
-    .info-title{
-        font-size: 2rem;
+    .login-btn-container{
+        grid-column: 10 / 11;
     }
 
-    
-    .info-text{
-        width: 500px;
-        margin-left: 0;
+    .sign-up-btn-container{
+        grid-column: 11 / 13;
     }
-
-    .footer{
-        display: grid;
-        grid-template-columns: 350px 1fr;
-        padding-top: 1em;
-        padding-bottom: 1.5em;
-    }  
-
-    .footer-logo-container{
-        margin-top: 2em;
-        margin-right: 3em;
-    }
-
-    .footer-container-list{ 
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: start;
-        text-align: left;
-    }
-}
-
-@media screen and (min-width: 1440px){
-    .illustration-editor{
-        top: -150px;
-        height: 850px;
-        background-position: 100px;
-    }
-
-    .illustration-phones{
-        top: -110px;
-        left: 50px;
-        background-size: 690px;
-    }
-
-    .infraestructure-aside-title{
-        font-size: 2.4rem;
-    }
-
-    .infraestructure-aside-text{
-        font-size: 1.1rem;
-    }
-
-    .illustration-laptop{
-        height: 900px;
-        background: url(assets/images/illustration-laptop-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: 900px;
-        background-position: -260px center;
-    }
-
 }
 
 .attribution { font-size: 11px; text-align: center; }

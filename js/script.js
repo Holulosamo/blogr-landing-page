@@ -6,4 +6,3 @@ hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('close-icon');
     navMenu.classList.toggle('open');
 });
-
